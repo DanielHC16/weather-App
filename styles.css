@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #181530;
+}
+
+.card {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #39bb94, #216382);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #b4e1d4;
+    color: #35423f;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+    transition: background 1s ease;
+}
+
+.search input:hover {
+    background: #a3d5c7;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #b4e1d4;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.search button:hover {
+    background: #a3d5c7;
+    transform: scale(1.1);
+}
+
+.search button:active {
+    transform: scale(1.2);
+    transition: background 0.6s ease;
+}
+
+.search button img {
+    width: 18px;
+}
+
+.weather-icon {
+    width: 150px;
+    margin-top: 30px;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards 0.5s;
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards 0.7s;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards 1s;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 55px;
+    margin-right: 10px;
+}
+
+.humidity, .wind {
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+.weather {
+    display: none;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    transition: opacity 0.5s ease;
+}
+
+.weather.fade-out {
+    opacity: 0;
+}
+
+
+.error {
+    text-align: left;
+    margin-left: 18px;
+    font-size: 14px;
+    margin-top: 10px;
+    color: rgb(164, 60, 60);
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
